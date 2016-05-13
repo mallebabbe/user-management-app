@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Welcome
+	br
+	each user in allUsers
+		p(style="color:red")= user.firstname
+		p= user.lastname
+		p= user.email
+

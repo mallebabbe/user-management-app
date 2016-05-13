@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title newuser
+	body
+		h1 Register as new user
+		form(name="addNewUser", action="/register", method="post")
+			div.input
+				span.label Firstname
+				input(type="text", name="firstname")
+			div.input
+				span.label Lastname
+				input(type="text", name="lastname")
+			div.input
+				span.label E-mail
+				input(type="text", name="email")
+			div.actions
+				input(type="submit", value="register now")
+		a(href='/') Home

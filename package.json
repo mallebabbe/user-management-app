@@ -1,0 +1,18 @@
+{
+  "name": "user-info-app",
+  "version": "1.0.0",
+  "description": "user management application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "user"
+  ],
+  "author": "sven van hoorn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}
