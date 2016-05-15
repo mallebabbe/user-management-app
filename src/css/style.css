@@ -2,12 +2,11 @@ body {
 /*    background: url('../images/') repeat scroll top left;*/
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #00CC00;
     background-color: black;
         letter-spacing: 1px;
 }
-
 * {
     padding: 0px;
     margin: 0px;
@@ -15,11 +14,12 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 p {
-    padding: .5em;
-    margin: .5em;
-
+    font-size: 1em;
+    padding: 0em 0em 0.2em 0.5em;
+}
+h1 {
+    font-weight: 700;
 }
 /* start header */
 
@@ -51,7 +51,7 @@ p {
 #nav-wrapper ul {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 50px;
     padding-top: 1em;
 }
@@ -70,6 +70,6 @@ p {
     background-color: black;
     color: #00CC00;
 }
-a:active { 
+a:hover { 
     background-color: yellow;
 }

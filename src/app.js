@@ -5,6 +5,8 @@ var app = express()
 var jsonREADER = require ( '../resources/json-file-reader') // include my fs.readFile module for json
 var bodyParser = require('body-parser'); // include body parser 
 // app.use bodyparser for ...
+// add css
+app.use(express.static('./src/css'));
 
 app.use(bodyParser.urlencoded({ extended:true }))
 

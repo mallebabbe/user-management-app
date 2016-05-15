@@ -2,15 +2,19 @@ doctype html
 html
 	head
 		title= title
-		link(rel='stylesheet', src='/style.css', type='text/css')
+		link(rel='stylesheet', href='/style.css', type='text/css')
 	body
 		#navbar-fixed
 			#nav-wrapper
-				a(class=['logo'], href='/') User management app
 				ul
+					li
+						a(class=['logo'], href='/') User Management App
 					li
 						a(href='http://localhost:3000/register') Sign up
 					li
 						a(href='http://localhost:3000/searchform') Search
+		br
+		br
+		br
 		#content
 			block content
