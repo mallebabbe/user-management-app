@@ -2,16 +2,15 @@ doctype html
 html
 	head
 		title= title
-		link(rel='stylesheet', href='//style.css')
+		link(rel='stylesheet', src='/style.css', type='text/css')
 	body
-		#navbar
-			ul
-				li
-					h3 User management app
-			ul
-				li
-					a(href='/') Home
-					a(href='http://localhost:3000/register') Sign up
-					a(href='http://localhost:3000/searchform') Search
+		#navbar-fixed
+			#nav-wrapper
+				a(class=['logo'], href='/') User management app
+				ul
+					li
+						a(href='http://localhost:3000/register') Sign up
+					li
+						a(href='http://localhost:3000/searchform') Search
 		#content
-		block content
+			block content
