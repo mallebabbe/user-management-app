@@ -1,1 +1,4 @@
-$('document').ready (do..x )
+$('document').ready ( function ( ) {
+	console.log("DOM is ready")
+	// $('')
+}) 

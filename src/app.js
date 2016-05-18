@@ -40,6 +40,8 @@ app.post('/searchresult', function (req, res) {
 	jsonREADER.readJSON('./resources/users.json', function ( jsonData ) {
 	console.log("Search post request received" + '\n' + "for the name : " + searchName )
 
+
+
 		for (var i = 0; i < jsonData.length; i++) {
 			if( searchName == jsonData[i].firstname || searchName == jsonData[i].lastname) {
 				console.log("Object match found with : " + searchName)
@@ -48,13 +50,26 @@ app.post('/searchresult', function (req, res) {
 			}
 		}		
 		if (storeUser.length > 0)
-			res.send("Firstname: " + storeUser[0].toString() + "<br>" + "Lastname: " + storeUser[1].toString() + "<br>" + "Email: " + storeUser[2].toString())
+			res.send("Firstname: " , storeUser[0].toString() + "<br>" + "Lastname: " + storeUser[1].toString() + "<br>" + "Email: " + storeUser[2].toString())
 		else {
 			res.send("No match found." + "<br>" + "Try another name")
 		}
 	})
 })
 
+app.get('/api', (req, res) => {
+
+	var searchResult = req.body.userNameSearch
+	var foundUsers = []
+console.log(searchResult)	
+	jsonREADER.readJSON('./resources/users.json', function ( jsonData ) {
+
+	console.log("")
+
+	})
+})
+
+////////////////////////////////////////////////////////////////////
 // Part 2 = Create two more routes:
 // route 4: renders a page with three forms on it (first name, last name, and email) 
 app.get('/register', function ( req,res ) {
