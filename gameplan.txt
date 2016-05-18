@@ -1,4 +1,11 @@
 gameplan
+part 1
+
+
+part 2
+
+--------------------------------------
+excersise 1
 
 Create a Node.js application that is the beginning of a user management system. 
 
