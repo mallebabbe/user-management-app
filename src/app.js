@@ -63,7 +63,7 @@ app.post('/api', function ( req, res ){
 				// console.log("total name : " + userMatch)
 			} 
 		}
-		res.send(totalUsers) //userMatch
+		res.send(totalUsers)
 	})	
 })
 

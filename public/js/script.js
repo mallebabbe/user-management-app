@@ -15,20 +15,19 @@ var inputLetters = {
 			if (fireRequest) {
 				/// set to false afterwards
 				fireRequest = false
-			// ajax gets loaded
+			// ajax gets loaded here
 			$.post('/api', inputLetters, function (data) {
-
-			// if (inputLetters.userNameSearch)
+			// the results get narrowed after the results are more specified, so no matches gets filtered out
 			$('#results').empty()
 			$('#displayname').empty()
-
+			// add the results as options to a list under the #searchfield 
 			for (person in data) {
 				$('#results').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
 				$('#displayname').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
 			}
-			console.log("this is the data : " + data)
 		})
 		}
+		// after 300ms a new ajax call gets available to prevent spamming
 		setTimeout(function() {
 			fireRequest = true
 		}, 300)
