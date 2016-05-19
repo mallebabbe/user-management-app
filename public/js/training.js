@@ -30,7 +30,7 @@ var add = []
 // var index = array.indexOf(fruit)
 
 	for (var i = 0; i < array.length; i++) {
-					console.log(array1[i])
+			console.log(array1[i])
 		if ( array[i] == fruit) {
 			console.log(array1[i])
 			add.push(i)
