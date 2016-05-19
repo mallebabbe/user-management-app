@@ -33,10 +33,8 @@ app.get('/searchform', function ( req, res ) {
 		title: "Search User"
 	});
 })
-///////////////////////////////////////////////////////////
 
-// AJAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PART
-
+// autocomplete searchform
 app.post('/api', function ( req, res ){
 	
 	var searchName = req.body.userNameSearch.toLowerCase()
@@ -63,9 +61,7 @@ app.post('/api', function ( req, res ){
 				userMatch = jsonData[i]
 				totalUsers.push(userMatch)
 				// console.log("total name : " + userMatch)
-			} else {
-				// console.log("Nooo")
-			}
+			} 
 		}
 		res.send(totalUsers) //userMatch
 	})	
