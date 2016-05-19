@@ -9,3 +9,8 @@ every guest has a:
   - +(amount of not specified guests with numbers)
 
 you can add a user in the 'register' user tab
+
+-------------------------
+
+next feature: 
+	add events with seperate guestlist
