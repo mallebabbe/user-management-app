@@ -30,6 +30,7 @@ app.get('/', function (req, res) {
 // route 2 : renders a page that displays a form which is your search bar.
 app.get('/searchform', function ( req, res ) {
 	res.render('searchform', {
+		title: "Search User"
 	});
 })
 ///////////////////////////////////////////////////////////
@@ -104,7 +105,7 @@ app.post('/searchresult', function (req, res) {
 // route 4: renders a page with three forms on it (first name, last name, and email) 
 app.get('/register', function ( req,res ) {
 	res.render('newuserform', {
-		title: "Search User"
+		title: "Register User"
 	})
 })
 
