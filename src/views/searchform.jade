@@ -5,9 +5,12 @@ block content
 	form(name="searchForUser", action="/searchresult", method="post")
 		div.input
 			span.label Name
-			input(id='searchfield', type="text", name="userNameSearch")
-			datalist#result
+			input(list='results', id='searchfield', type="text", name="userNameSearch", autocomplete='off')
+			datalist#results
 		div.actions
 			input(type="submit", value="go search")
 	a(href='/') Home
-	div#displayname haii
+	div#displayname display
+		p#firstname
+		p#lastname
+		p#email
