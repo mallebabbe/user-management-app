@@ -24,6 +24,9 @@ var inputLetters = {
 			for (person in data) {
 				$('#results').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
 				$('#displayname').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
+				$ ( 'option' ) .click( function() {
+					$('#searchfield').val($(this).val())
+				})
 			}
 		})
 		}
