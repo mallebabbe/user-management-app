@@ -9,6 +9,10 @@ $('#searchfield').keyup ( function( ) {
 var inputLetters = {
 	userNameSearch: $(this).val( )
 }
+$ ( 'option' ) .click( function() {
+	$('#searchfield').val($(this).val())
+	console.log('clicked')
+})
 		/// when inputLetters.userNameSearch contains values
 		if (inputLetters.userNameSearch) {
 			// and if canfirerequest is true
@@ -24,9 +28,6 @@ var inputLetters = {
 			for (person in data) {
 				$('#results').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
 				$('#displayname').append('<option>' + data[person].firstname + " " + data[person].lastname + '</option>')
-				$ ( 'option' ) .click( function() {
-					$('#searchfield').val($(this).val())
-				})
 			}
 		})
 		}
@@ -36,6 +37,7 @@ var inputLetters = {
 		}, 300)
 	}
 })
+
 })
 
 
