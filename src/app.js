@@ -14,6 +14,17 @@ app.use(bodyParser.urlencoded({ extended:true }))
 app.set('views', './src/views'); // to set jade as the view engine for all files in directory: views 
 app.set('view engine', 'jade');
 
+///////// new part
+var client = require('guestlist-js')()
+
+client.setAccessToken(myAccessToken)
+
+client.getEvents({
+  limit: 10
+}, function (err, events) {
+  console.log(err || events)
+})
+
 
 // part 0
 // route 1: renders a page that displays all your users.
